@@ -1,0 +1,339 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swami Vivekanand Gyan Jyoti School</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <script src="script.js" defer></script>
+
+
+</head>
+
+<body>
+
+    <!-- LOGIN PAGE -->
+    <section id="loginScreen" class="login-screen">
+        <div class="login-card">
+
+            <div class="school-icon">
+                   <img src="LOGO.jpeg" alt="School Logo">
+              
+            </div>
+<!-- SCHOOL NAME -->
+<h2>Swami Vivekanand Gyan Jyoti School</h2>
+
+<h2 class="school-name-hindi">
+    स्वामी विवेकानन्द ज्ञान ज्योति स्कूल
+</h2>
+
+<!-- SCHOOL LOCATION -->
+<p class="school-location">
+    <i class="fa-solid fa-location-dot"></i>
+    Kataichawar, Banafa - Mau, (U.P)
+</p>
+            <h2>Student Login</h2>
+
+            <form id="loginForm">
+                <label for="studentId">Student ID</label>
+                <input
+                    type="text"
+                    id="studentId"
+                    placeholder="Enter Student ID"
+                    required
+                >
+
+                <label for="studentPassword">Password</label>
+                <input
+                    type="password"
+                    id="studentPassword"
+                    placeholder="Enter Password"
+                    required
+                >
+
+                <button type="submit" class="login-btn">
+                    Login <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+                <p id="loginMessage"></p>
+            </form>
+
+         
+        </div>
+    </section>
+
+
+    <!-- MAIN APP -->
+    <main id="app" class="app hidden">
+
+       <!-- SCHOOL HEADER -->
+<header class="school-header">
+<div class="school-icon">
+    <img src="LOGO.jpeg" alt="School Logo">
+</div>
+    <div class="school-header-text">
+
+        <h1>Swami Vivekanand Gyan Jyoti School</h1>
+
+        <h2>स्वामी विवेकानन्द ज्ञान ज्योति स्कूल</h2>
+
+        <p>
+            <i class="fa-solid fa-location-dot"></i>
+           Kataichawar, Banafa - Mau, (U.P)
+        </p>
+
+    </div>
+
+</header>
+
+
+        <!-- HOME PAGE -->
+        <section id="homePage" class="page active">
+
+            <!-- WELCOME SECTION -->
+            <div class="welcome-card">
+
+                <div>
+                    <p class="welcome-label">WELCOME BACK</p>
+
+                    <h2 id="welcomeName">Uttam Singh 👋</h2>
+
+                    <p id="welcomeClass">
+                        Class 10th · Student ID: SVGS001
+                    </p>
+                </div>
+
+                <div class="welcome-icon">
+                    <i class="fa-solid fa-shield-heart"></i>
+                </div>
+
+            </div>
+
+
+            <!-- ATTENDANCE AND RESULT -->
+            <div class="stats-grid">
+
+                <div class="stat-card">
+
+                    <div class="stat-icon attendance-icon">
+                        <i class="fa-regular fa-calendar-check"></i>
+                    </div>
+
+                    <p>Attendance</p>
+                    <h3 id="homeAttendance">92%</h3>
+                    <small>Overall attendance</small>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <div class="stat-icon result-icon">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+
+                    <p>Latest Result</p>
+                    <h3 id="homeResult">85%</h3>
+                    <small>Latest exam score</small>
+
+                </div>
+
+            </div>
+
+
+            <!-- FEE STRUCTURE -->
+            <div class="fee-structure">
+
+                <div class="fee-heading">
+                    <div class="fee-heading-icon">
+                        <i class="fa-solid fa-wallet"></i>
+                    </div>
+
+                    <h3>Fee Structure</h3>
+                </div>
+
+                <div class="fee-box">
+
+                    <div class="fee-item total-fee">
+                        <span>Total Fees</span>
+                   <strong id="homeTotalFees">₹ 0</strong>
+                    </div>
+
+                    <div class="fee-divider"></div>
+
+                    <div class="fee-item paid-fee">
+                        <span>Paid Fees</span>
+                        <strong id="homePaidFees">₹ 0</strong>
+                    </div>
+
+                    <div class="fee-divider"></div>
+
+                    <div class="fee-item pending-fee">
+                        <span>Pending Fees</span>
+                       <strong id="homePendingFees">₹ 0</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- LATEST NOTICE -->
+            <div class="section-heading">
+                <h3>Latest Notice</h3>
+              
+            </div>
+
+            <div class="notice-card">
+
+                <div class="notice-icon">
+                    <i class="fa-solid fa-bullhorn"></i>
+                </div>
+
+                <div>
+                    <h4 id="noticeTitle">School Notice</h4>
+                    <p id="noticeDetails">
+                        Check Modules for the latest school announcements.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- MODULES PAGE -->
+        <section id="modulesPage" class="page">
+
+            <div class="page-heading">
+                <h2>Modules</h2>
+                <p>Access all your school information here.</p>
+            </div>
+
+            <div id="moduleList" class="module-list">
+
+                <button class="module-card" data-module="attendance">
+                    <span class="module-icon attendance-icon">
+                        <i class="fa-regular fa-calendar-check"></i>
+                    </span>
+                    <span>Attendance</span>
+                    <i class="fa-solid fa-chevron-right arrow"></i>
+                </button>
+
+                <button class="module-card" data-module="result">
+                    <span class="module-icon result-icon">
+                        <i class="fa-solid fa-chart-column"></i>
+                    </span>
+                    <span>Result</span>
+                    <i class="fa-solid fa-chevron-right arrow"></i>
+                </button>
+
+                <button class="module-card" data-module="study">
+                    <span class="module-icon study-icon">
+                        <i class="fa-solid fa-book-open"></i>
+                    </span>
+                    <span>Study Material</span>
+                    <i class="fa-solid fa-chevron-right arrow"></i>
+                </button>
+
+                <button class="module-card" data-module="notices">
+                    <span class="module-icon notice-module-icon">
+                        <i class="fa-regular fa-bell"></i>
+                    </span>
+                    <span>Notice Board</span>
+                    <i class="fa-solid fa-chevron-right arrow"></i>
+                </button>
+
+            </div>
+
+
+            <!-- MODULE DETAILS -->
+            <div id="moduleDetail" class="module-detail hidden">
+
+                <button id="backToModules" class="back-button">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    Back to Modules
+                </button>
+
+                <div id="moduleDetailContent"></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROFILE PAGE -->
+        <section id="profilePage" class="page">
+
+            <div class="page-heading">
+                <h2>My Profile</h2>
+            
+            </div>
+
+            <div class="profile-card">
+
+                <div class="profile-avatar">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+
+                <h3 id="profileName">Uttam Singh</h3>
+               
+
+                <div class="profile-details">
+
+                    <div>
+                        <span>Class</span>
+                        <strong id="profileClass">10th</strong>
+                    </div>
+
+                    <div>
+                        <span>Roll Number</span>
+                        <strong id="profileRoll">12</strong>
+                    </div>
+
+                    <div>
+                        <span>School</span>
+                        <strong>Swami Vivekanand Gyan Jyoti School</strong>
+                    </div>
+
+                </div>
+
+                <button id="logoutButton" class="logout-btn">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Logout
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- BOTTOM NAVIGATION -->
+        <nav class="bottom-nav">
+
+            <button class="nav-item active" data-page="homePage">
+                <i class="fa-solid fa-house"></i>
+                <span>Home</span>
+            </button>
+
+            <button class="nav-item" data-page="modulesPage">
+                <i class="fa-solid fa-grip"></i>
+                <span>Modules</span>
+            </button>
+
+            <button class="nav-item" data-page="profilePage">
+                <i class="fa-regular fa-user"></i>
+                <span>Profile</span>
+            </button>
+
+        </nav>
+
+    </main>
+
+</body>
+</html>
